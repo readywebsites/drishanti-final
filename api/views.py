@@ -17,6 +17,10 @@ from .serializers import (
 
 
 from rest_framework.generics import ListAPIView
+from django.shortcuts import render
+
+def frontend(request):
+    return render(request, "index.html")
 
 # 📂 CATEGORY VIEWS
 class CategoryListView(ListAPIView):
